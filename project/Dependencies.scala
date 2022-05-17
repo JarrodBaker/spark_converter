@@ -5,7 +5,7 @@ object Dependencies {
   lazy val testVersion = "3.2.11"
 
   lazy val dependencies = Seq(
-    configDeps, 
+    configDeps,
     loggingDeps,
     sparkDeps,
     testingDeps,
@@ -31,7 +31,6 @@ object Dependencies {
     "org.scalatest" %% "scalatest" % testVersion % "test",
     "org.scalacheck" %% "scalacheck" % "1.14.3"
   )
-
 
   lazy val gcpDeps = Seq(
     "com.google.cloud" % "google-cloud-dataproc" % "2.3.2" % "provided",
