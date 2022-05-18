@@ -13,7 +13,8 @@ object Dependencies {
   ).flatten
 
   lazy val configDeps = Seq(
-    "com.github.pureconfig" %% "pureconfig" % "0.14.1"
+    "com.github.pureconfig" %% "pureconfig" % "0.14.1",
+    "com.typesafe" % "config" % "1.4.2"
   )
 
   lazy val loggingDeps = Seq(
