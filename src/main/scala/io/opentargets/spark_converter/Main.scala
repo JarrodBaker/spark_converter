@@ -9,10 +9,8 @@ object Main extends LazyLogging {
 
   import pureconfig._
   import pureconfig.generic.auto._
-
-  def main(args: Array[String]): Unit = {
-    logger.info("Spark converter starting.")
-    lazy val config: ConfigReader.Result[Configuration] = {
+  
+  lazy val config: ConfigReader.Result[Configuration] = {
       logger.info("Loading conversion configuration from file.")
       val config = ConfigFactory.load()
 
@@ -20,8 +18,11 @@ object Main extends LazyLogging {
       logger.info(s"Loaded configuration: ${obj.toString}")
 
       obj
-    }
+  }
 
+  def main(args: Array[String]): Unit = {
+    logger.info("Spark converter starting.")
+    
     config.map { conf =>
       {
         lazy val sparkRunner: SparkInst = new SparkInst(conf.spark)
