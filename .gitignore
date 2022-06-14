@@ -10,3 +10,4 @@ target/
 .bloop/
 .ammonite/
 metals.sbt
+.idea/
